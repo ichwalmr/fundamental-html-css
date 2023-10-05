@@ -1,0 +1,322 @@
+:root {
+    --bacground-color: #004225;
+    --font-color: #F5F5DC;
+    --container-color: #FFB000;
+    --nav-color: #D2DE32;
+    --grid-colorfont: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gabarito', cursive;
+    scroll-behavior: smooth;
+}
+
+.header {
+    padding: 5px 5%;
+    background-color: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 5;
+    top: 0;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+.header a {
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 1.2em;
+    transition: 0.5s ease;
+}
+
+.header a:hover {
+    background-color: var(--bacground-color);
+    color: var(--font-color);
+}
+
+.header h1,
+.header a {
+    color: black;
+}
+
+.main {
+    background-color: var(--bacground-color);
+    padding: 0 5%;
+}
+
+.home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--font-color);
+    padding-bottom: 20px;
+}
+
+.home-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+}
+
+.home-left a,
+p {
+    text-decoration: none;
+    padding-top: 20px;
+
+}
+
+.home-left-container {
+    border: 1px solid var(--font-color);
+    color: var(--font-color);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    padding: 3px 2px;
+    font-size: 20px;
+    justify-content: space-around;
+    transition: 0.5s ease;
+}
+
+.home-left-container:hover {
+    transform: scale(1.1);
+}
+
+.home-left-container img {
+    width: 20%;
+}
+
+.home-right {
+    padding: 11em 0;
+}
+
+/* =======right======== */
+.home-right img {
+    animation: TopBottom 7s ease-in-out infinite;
+}
+
+/* ===========sejarah========= */
+.sejarah {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 0 50px 0;
+}
+
+.sejarah h1 {
+    font-size: 2em;
+}
+
+.content-sejarah {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.content-sejarah img {
+    width: 500px;
+    height: 400px;
+    border: 2px solid var(--font-color);
+}
+
+#sejarah h1,
+p {
+    color: var(--font-color);
+}
+
+/* ========geografis========= */
+.geografis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 0 50px 0;
+
+}
+
+.geografis h1 {
+    color: var(--font-color);
+    font-size: 2em;
+}
+
+.content-geografis {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.content-geografis img {
+    width: 500px;
+    height: 400px;
+}
+
+/* =========wisata========== */
+
+.wisata {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wisata h1 {
+    color: var(--font-color);
+    font-size: 2em;
+}
+
+.grid-container a {
+    text-decoration: none;
+    color: var(--grid-colorfont);
+}
+
+.conten-wisata {
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+
+.grid-wisata {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--nav-color);
+    transition: transform 0.9s ease, margin-top 0.9s ease;
+}
+
+.grid-wisata:hover {
+    transform: scale(1.05);
+    margin-top: -10px;
+}
+
+.grid-wisata h1 {
+    font-size: 1em;
+}
+
+.grid-wisata img {
+    max-width: 150%;
+    height: auto;
+}
+
+
+/* ======footer====== */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--nav-color);
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.footer p {
+    color: var(--grid-colorfont);
+    padding: 0;
+}
+
+.footer aside {
+    display: flex;
+    align-items: center;
+}
+
+.footer img {
+    width: 25px;
+    padding: 0 20px;
+    transition: transform 0.3s ease;
+}
+
+.footer img:hover {
+    transform: scale(1.3);
+}
+
+@keyframes TopBottom {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+}
+
+/* responsif */
+@media only screen and (max-width: 768px) {
+
+    .header {
+        justify-content: center;
+        padding: 16px 32px;
+        flex-wrap: wrap;
+    }
+
+    .home {
+        flex-wrap: wrap;
+    }
+
+    .home-right {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-sejarah {
+        padding: 10px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .content-sejarah img,
+    .content-geografis img {
+        width: 100%;
+    }
+
+    .content-geografis {
+        padding: 10px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .wisata h1 {
+        text-align: center;
+    }
+
+    .conten-wisata {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-wisata img {
+        width: 100%;
+    }
+
+    .grid-wisata {
+        width: 8em;
+    }
+
+    .grid-wisata h3 {
+        font-size: .7rem;
+        padding: 0;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 5px 10px;
+    }
+
+    .footer p {
+        font-size: .7rem;
+    }
+
+}
